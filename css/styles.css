@@ -17,7 +17,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #f0f0f0;
+    background-color: #eddb98;
     color: #333;
 }
 
@@ -75,7 +75,7 @@ footer {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #72d6e8;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -85,7 +85,7 @@ footer {
 }
 
 .button:hover {
-    background-color: #0056b3;
+    background-color: #0092b3;
 }
 
 .card {
