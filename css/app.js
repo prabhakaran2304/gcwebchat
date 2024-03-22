@@ -1,3 +1,5 @@
+//--------------Dark and white mode -----------------
+
 let toggler = document.getElementById("switch");
 
 toggler.addEventListener("click", () => {
