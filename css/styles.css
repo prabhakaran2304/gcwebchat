@@ -1,76 +1,17 @@
-/* Color Toggler button dark and white mode*/
-:root {
-  --primary-color: white;
-  --primary-label: black;
-  --secndary-label: white;
-  --white-ball: white;
-  --black-ball: black;
-}
-
-body {
-  background: var(--primary-color);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#switch {
-  width: 0;
-  height: 0;
-  visibility: hidden;
-}
-
-label {
-  display: block;
-  width: 100px;
-  height: 50px;
-  background: var(--primary-label);
-  border-radius: 100px;
-  position: relative;
+/* intercative button*/
+.interactive-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
   cursor: pointer;
-  transition: 0.5s;
+  transition: background-color 0.3s ease;
 }
 
-label::after {
-  content: "";
-  width: 40px;
-  height: 40px;
-  border-radius: 70px;
-  background-color: var(--white-ball);
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  transition: 0.5s;
+.interactive-button:hover {
+  background-color: #45a049;
 }
 
-#switch:checked + label:after {
-  background-color: var(--black-ball);
-  left: calc(100% - 5px);
-  transform: translateX(-100%);
-}
-
-#switch:checked + label {
-  background-color: var(--secndary-label);
-}
-
-label:active:after {
-  width: 60px;
-}
-
-/* Clock*/
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
-
-body {
-  background-color: black;
-  font-family: "Orbitron", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.clock {
-  color: #20c20e;
-  font-size: 60px;
-  letter-spacing: 7px;
+.interactive-button:active {
+  background-color: #3e8e41;
 }
