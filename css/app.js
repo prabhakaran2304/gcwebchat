@@ -1,36 +1,21 @@
-//--------------Dark and white mode -----------------//
+// Get the button element
+const changeColorButton = document.getElementById('changeColorButton');
 
-let toggler = document.getElementById("switch");
-
-toggler.addEventListener("click", () => {
-  //   if (toggler.checked === true) {
-  //     document.body.style.backgroundColor = "black";
-  //   } else {
-  //     document.body.style.backgroundColor = "white";
-  //   }
-
-  toggler.checked === true
-    ? (document.body.style.backgroundColor = "black")
-    : (document.body.style.backgroundColor = "white");
-});
-
-//-------------- Digital clock-----------//
-const clock = document.querySelector(".clock");
-
-clock.addEventListener("load", tick);
-
-function tick() {
-  const now = new Date();
-  const h = now.getHours();
-  const m = now.getMinutes();
-  const s = now.getSeconds();
-
-  const html = `
-        <span>${h} :</span>
-        <span>${m} :</span>
-        <span>${s}</span>
-    `;
-  clock.innerHTML = html;
+// Function to generate a random color
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
 }
 
-setInterval(tick, 1000);
+// Function to change the background color on button click
+function changeBackgroundColor() {
+  const newColor = getRandomColor();
+  document.body.style.backgroundColor = newColor;
+}
+
+// Add event listener to the button
+changeColorButton.addEventListener('click', changeBackgroundColor);
