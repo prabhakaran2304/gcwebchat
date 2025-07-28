@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Genesys Cloud Web Messaging - AI Guides </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts for modern look -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+            padding: 2.5rem 2rem;
+            max-width: 400px;
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .brand-header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1.2rem;
+        }
+        .brand-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d3a6c;
+            margin: 0.5rem 0;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            font-size: 1.02rem;
+            color: #6e7ca0;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .nav {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 1.5rem;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(90deg, #4f8cff 0%, #42e695 100%);
+            padding: 0.5rem 1.2rem;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(76, 201, 240, 0.08);
+        }
+        .nav a:hover {
+            background: linear-gradient(90deg, #42e695 0%, #4f8cff 100%);
+        }
+        @media (max-width: 500px) {
+            .container { padding: 1.2rem 0.5rem; }
+            .brand-header h1 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">Back to HomePage</a>
+        </div>
+        <div class="brand-header">
+            <h1>Genesys Cloud Web Messaging</h1>
+        </div>
+        <div class="subtitle">
+            Welcome to the Genesys Cloud Web Messaging test page.<br>
+            Start a conversation, try out features, or return home at any time!
+        </div>
+        <!-- Genesys Cloud widget will appear here -->
+    </div>
+    <!-- Genesys Cloud Web Messaging Script -->
+    <script type="text/javascript" charset="utf-8">
+      (function (g, e, n, es, ys) {
+        g['_genesysJs'] = e;
+        g[e] = g[e] || function () {
+          (g[e].q = g[e].q || []).push(arguments)
+        };
+        g[e].t = 1 * new Date();
+        g[e].c = es;
+        ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+      })(window, 'Genesys', 'https://apps.usw2.pure.cloud/genesys-bootstrap/genesys.min.js', {
+        environment: 'usw2',
+        deploymentId: 'add2b42f-8918-46d8-9095-f3e0c769307b'
+      });
+    </script>
+    <script>
+      (function(a,t,c,l,o,u,d){a['_genesysJourneySdk']=o;a[o]=a[o]||function(){
+      (a[o].q=a[o].q||[]).push(arguments)},a[o].l=1*new Date();u=t.createElement(c),
+      d=t.getElementsByTagName(c)[0];u.async=1;u.src=l;u.charset='utf-8';d.parentNode.insertBefore(u,d)
+      })(window, document, 'script', 'https://apps.usw2.pure.cloud/journey/sdk/js/web/v1/ac.js', 'ac');
+      ac('init', '57e75942-3d28-4327-b87a-2f3ea9980fa5', { region: 'usw2' });
+      ac('pageview');
+    </script>
+</body>
+</html>
