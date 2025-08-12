@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts for modern look -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             margin: 0;
@@ -72,11 +73,13 @@
     </style>
 </head>
 <body>
+    <div class="ai-bg" id="aiBg"></div>
     <div class="container">
         <div class="nav">
             <a href="index.html">Back to HomePage</a>
         </div>
         <div class="brand-header">
+             <i class="fas fa-robot ai-icon"></i>
             <h1>Genesys Cloud Web Messaging</h1>
         </div>
         <div class="subtitle">
@@ -109,5 +112,21 @@
       ac('init', '57e75942-3d28-4327-b87a-2f3ea9980fa5', { region: 'usw2' });
       ac('pageview');
     </script>
+    
+<script>    
+document.addEventListener('DOMContentLoaded', function() {
+    const aiBg = document.getElementById('aiBg');
+    const particleCount = 20;
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'ai-particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = (Math.random() * 15) + 's';
+        particle.style.opacity = Math.random() * 0.5 + 0.2;
+        aiBg.appendChild(particle);
+    }
+});
+</script>           
 </body>
 </html>
